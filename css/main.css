@@ -229,7 +229,7 @@ img {
   display: block;
   width: 24px;
   height: 24px;
-  background: url("../../img/checkmark.svg") center no-repeat;
+  background: url("../img/checkmark.svg") center no-repeat;
   position: absolute;
   left: 0;
 }
