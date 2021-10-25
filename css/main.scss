@@ -1,0 +1,41 @@
+$containerWidth: 940px;
+$baseFontSize: 16px;
+
+//colors
+$gray: #F5F5F5;
+$gray2: #F2F5F4;
+$gray3: #F8FAF9;
+$gray4: #C4C4C4;
+$body: #666666;
+$white: #FFFFFF;
+$black: #292929;
+$red: #E01F3D;
+
+//typography
+@mixin typo-1 ($size, $lh, $weight) {
+    font-family: "Play", Arial, Helvetica, sans-serif;
+    font-size: $size;
+    line-height: $lh;
+    font-weight: $weight;
+}
+
+@mixin typo-2 ($size, $lh, $weight) {
+    font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
+    font-size: $size;
+    line-height: $lh;
+    font-weight: $weight;
+}
+
+//base
+@import "layout";
+
+//components
+@import "components/button";
+@import "components/input";
+@import "components/checkbox";
+@import "components/radio";
+@import "components/header";
+@import "components/hero";
+@import "components/features";
+@import "components/reviews";
+@import "components/order";

@@ -1,0 +1,45 @@
+.checkbox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &__caption {
+        @include typo-1(16px, 19px, 400);
+        color: $white;
+        position: relative;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        padding-left: 24px + 11px;
+        min-height: 24px;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            background-color: $white;
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    &__input {
+        visibility: hidden;
+        pointer-events: none;
+        width: 0;
+        height: 0;
+
+        &:checked + .checkbox__caption::after {
+            content: '';
+            margin-right: 11px;
+            display: block;
+            width: 24px;
+            height: 24px;
+            background: url('../../img/checkmark.svg') center no-repeat;
+            position: absolute;
+            left: 0;
+        }
+    }
+}

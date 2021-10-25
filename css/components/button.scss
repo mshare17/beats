@@ -1,0 +1,23 @@
+.btn {
+    outline: none;
+    border: none;
+    display: inline-flex;
+    color: $white;
+    cursor: pointer;
+    user-select: none;
+    
+    &__fill--red {
+        @include typo-1(16px, 18px, 700);
+        padding: 18px 41px;
+        border-radius: 44px;
+        text-transform: uppercase;
+        background-color: $red;
+    }
+
+    &--text {
+        @include typo-1(16px, 19px, 400);
+        background-color: transparent;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
