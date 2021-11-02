@@ -4,13 +4,19 @@
     }
 
     &-link svg {
+        width: 30px;
+        height: 30px;
         transition-duration: .3s;
         transition-property: fill;
         fill: #B3B3B3;
+
+        @include phones {
+            width: 24px;
+            height: 24px;
+        }
     }
 
     &-link:hover svg {
         fill: #000;
     }
-
 }

@@ -245,11 +245,19 @@
   margin-left: 0.625rem;
 }
 .socials__item-link svg {
+  width: 30px;
+  height: 30px;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   -webkit-transition-property: fill;
   transition-property: fill;
   fill: #B3B3B3;
+}
+@media screen and (max-width: 480px) {
+  .socials__item-link svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 .socials__item-link:hover svg {
   fill: #000;
@@ -1145,6 +1153,19 @@ address {
   }
 }
 
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFFFFF;
+}
+@media screen and (max-width: 480px) {
+  .footer {
+    position: static;
+  }
+}
+
 .footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1156,6 +1177,33 @@ address {
   padding-bottom: 1.125rem;
   max-width: 60rem;
 }
+@media screen and (max-width: 480px) {
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 
 .footer__address {
   font-family: "Play", Arial, Helvetica, sans-serif;
@@ -1164,11 +1212,24 @@ address {
   font-weight: 400;
 }
 
+@media screen and (max-width: 480px) {
+  .phone-number {
+    margin-top: 12px;
+  }
+}
 .phone-number__text {
   font-family: "Play", Arial, Helvetica, sans-serif;
   font-size: 1.125rem;
   line-height: 1.3125rem;
   font-weight: 400;
+}
+@media screen and (max-width: 480px) {
+  .phone-number__text {
+    font-family: "Play", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.3125rem;
+    font-weight: 400;
+  }
 }
 
 .footer__socials {
@@ -1178,4 +1239,9 @@ address {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .footer__socials {
+    margin-top: 18px;
+  }
 }

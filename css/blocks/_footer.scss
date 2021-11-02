@@ -1,20 +1,60 @@
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $white;
+
+    @include phones {
+        position: static;
+    }
+}
+
 .footer__container {
     display: flex;
     justify-content: space-between;
     padding-top: rem(20px);
     padding-bottom: rem(18px);
     max-width: rem(960px);
+
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: rem(32px);
+    }
+}
+
+.footer__contacts {
+    @include phones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .footer__address {
     @include typo-1(rem(18px), rem(24px), 400);
 }
 
-.phone-number__text {
-    @include typo-1(rem(18px), rem(21px), 400);
+.phone-number {
+    @include phones {
+        margin-top: 12px;
+    }
+
+    &__text {
+        @include typo-1(rem(18px), rem(21px), 400);
+    
+        @include phones {
+            @include typo-1(rem(16px), rem(21px), 400);
+        }
+    }
 }
 
 .footer__socials {
     display: flex;
     align-items: center;
+
+    @include phones {
+        margin-top: 18px;
+    }
 }
