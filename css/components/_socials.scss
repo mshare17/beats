@@ -1,0 +1,16 @@
+.socials__item {
+    &:nth-of-type(n+2) {
+        margin-left: rem(10px); 
+    }
+
+    &-link svg {
+        transition-duration: .3s;
+        transition-property: fill;
+        fill: #B3B3B3;
+    }
+
+    &-link:hover svg {
+        fill: #000;
+    }
+
+}

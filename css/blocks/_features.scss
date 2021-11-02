@@ -1,6 +1,11 @@
 .features {
     height: 100vh;
-    min-height: 650px;
+    min-height: rem(650px);
+
+    @include phones {
+        height: auto;
+        min-height: initial;
+    }
 }
 
 .features__container {
@@ -12,41 +17,69 @@
 
     &::before {
         content: '';
-        width: 42px;
-        height: 42px;
+        width: rem(42px);
+        height: rem(42px);
         background: url('../img/decor-1.svg') center no-repeat;
         background-size: contain;
         position: absolute;
-        top: -21px;
-        right: 40px;
+        top: rem(-21px);
+        right: rem(40px);
+    }
+
+    @include phones {
+        padding-top: 38px;
+        padding-top: 54px;
     }
 }
 
 .features__title {
     text-align: center;
+
+    @include phones {
+        @include typo-1(rem(32px), rem(36px), 700);
+    }
 }
 
 .features__desc {
-    @include typo-1(16px, 18px, 400);
-    margin-top: 18px;
-    max-width: 590px;
+    @include typo-1(rem(16px), rem(18px), 400);
+    margin-top: rem(18px);
+    max-width: rem(590px);
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     color: $body;
+
+    @include phones {
+        @include typo-1(16px, 19px, 400);
+    }
 }
 
 .features__list {
-    margin-top: 62px;
+    margin-top: rem(62px);
     display: flex;
     align-items: flex-start;
     justify-content: center;
+
+    @include phones {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
 }
 
 .features__item {
     position: relative;
     padding-left: 3%;
     padding-right: 3%;
+
+    @include phones {
+        display: flex;
+        width: 100%;
+        margin-top: rem(43px);
+        align-items: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     &:nth-of-type(n+2)::before {
         content: '';
@@ -55,24 +88,42 @@
         left: 0;
         display: inline-block;
         background: url('../img/separator.svg') center no-repeat;
-        width: 67px;
-        height: 21px;
+        width: rem(67px);
+        height: rem(21px);
         transform: translate(-50%, 56px);
+
+        @include phones {
+           display: none;
+        }
+
+    
     }
 
     &-title {
-        @include typo-1(24px, 28px, 700);
-        margin-top: 24px;
+        @include typo-1(rem(24px), rem(28px), 700);
+        margin-top: rem(24px);
         text-align: center;
         color: $black;
+
+        @include phones {
+            text-align: left;
+            margin-top: 0;
+            @include typo-1(24px, 28px, 700);
+        }
     }
 
     &-desc {
-        @include typo-1(16px, 18px, 400);
-        margin-top: 7px;
-        max-width: 247px;
+        @include typo-1(rem(16px), rem(18px), 400);
+        margin-top: rem(7px);
+        max-width: rem(247px);
         text-align: center;
         color: $body;
+        
+        @include phones {
+            text-align: left;
+            max-width: 302px;
+            @include typo-1(16px, 19px, 400);
+        }
     }
 }
 
@@ -80,10 +131,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 128px;
-    height: 128px;
+    width: rem(128px);
+    height: rem(128px);
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
     background-color: $gray2;
+
+    @include phones {
+        margin-left: 0;
+        margin-right: 0;
+        flex-shrink: 0;
+    }
+}
+
+.features__item-text {
+    @include phones {
+        margin-left: rem(12px);
+        
+    }
 }

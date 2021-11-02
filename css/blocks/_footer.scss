@@ -1,0 +1,20 @@
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: rem(20px);
+    padding-bottom: rem(18px);
+    max-width: rem(960px);
+}
+
+.footer__address {
+    @include typo-1(rem(18px), rem(24px), 400);
+}
+
+.phone-number__text {
+    @include typo-1(rem(18px), rem(21px), 400);
+}
+
+.footer__socials {
+    display: flex;
+    align-items: center;
+}

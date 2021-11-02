@@ -1,6 +1,10 @@
 $containerWidth: 940px;
 $baseFontSize: 16px;
 
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
 //colors
 $gray: #F5F5F5;
 $gray2: #F2F5F4;
@@ -26,6 +30,14 @@ $red: #E01F3D;
     font-weight: $weight;
 }
 
+//components
+@import "components/_media";
+@import "components/_button";
+@import "components/_input";
+@import "components/_checkbox";
+@import "components/_radio";
+@import "components/_socials";
+
 //blocks
 @import "blocks/_layout";
 @import "blocks/_header";
@@ -33,9 +45,4 @@ $red: #E01F3D;
 @import "blocks/_features";
 @import "blocks/_reviews";
 @import "blocks/_order";
-
-//components
-@import "components/_button";
-@import "components/_input";
-@import "components/_checkbox";
-@import "components/_radio";
+@import "blocks/_footer";
