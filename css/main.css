@@ -263,6 +263,10 @@
   fill: #000;
 }
 
+.map {
+  max-height: 800px;
+}
+
 html {
   font-size: 16px;
 }
