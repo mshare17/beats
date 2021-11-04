@@ -4,10 +4,6 @@
     right: 0;
     bottom: 0;
     background-color: $white;
-
-    @include phones {
-        position: static;
-    }
 }
 
 .footer__container {

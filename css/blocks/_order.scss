@@ -4,11 +4,6 @@
     background-color: #181818;
     background: url('../img/order-bg.jpg') center bottom no-repeat;
     background-size: cover;
-
-    @include phones {
-        height: initial;
-        min-height: initial;
-    }
 }
 
 .order__container {

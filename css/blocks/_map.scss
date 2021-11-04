@@ -1,3 +1,14 @@
 .map {
-    max-height: 800px;
+    height: 100vh;
+    min-height: rem(650px);
+}
+
+.map__content {
+    height: 100%;
+}
+
+.map__content-img {
+    max-height: 100%;
+    max-width: initial;
+    width: auto;
 }

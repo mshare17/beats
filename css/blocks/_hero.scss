@@ -2,16 +2,9 @@
     background-color: $gray;
     height: 100vh;
     min-height: rem(650px);
-
-    @include tablets {
-        height: auto;
-        min-height: initial;
-    }
 }
 
 .hero__container {
-    background: url("../img/beats.png") right 50% no-repeat;
-    background-size: rem(489px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -19,9 +12,46 @@
     max-width: 915px;
 
     @include tablets {
-        padding-bottom: rem(64px);
-        background-size: rem(323px);
-        background-position: center top 118px;
+        justify-content: stretch;
+    }
+}
+
+.hero__content {
+    position: relative;
+    display: flex;
+    z-index: 1;
+
+    @include tablets {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.hero__img {
+    position: absolute;
+    right: 0;
+    top: -24px;
+    z-index: -1;
+
+    order: 2;
+    flex-shrink: 0;
+    margin-left: 32px;
+    display: flex;
+    width: 489px;
+    overflow: hidden;
+
+    @include tablets {
+        position: static;
+        order: 0;
+        width: 323px;
+    }
+
+    &-pic {
+        display: block;
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -30,11 +60,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: rem(494px);
-    }
-
-    @include phones {
-        margin-top: 390px;
+        margin-top: 64px;
     }
 }
 
@@ -80,6 +106,7 @@
     margin-bottom: rem(50px);
     display: flex;
     align-items: flex-start;
+    z-index: 1;
 
     &-item {
         display: flex;

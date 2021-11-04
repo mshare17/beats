@@ -264,7 +264,18 @@
 }
 
 .map {
-  max-height: 800px;
+  height: 100vh;
+  min-height: 40.625rem;
+}
+
+.map__content {
+  height: 100%;
+}
+
+.map__content-img {
+  max-height: 100%;
+  max-width: initial;
+  width: auto;
 }
 
 html {
@@ -458,16 +469,8 @@ address {
   height: 100vh;
   min-height: 40.625rem;
 }
-@media screen and (max-width: 768px) {
-  .hero {
-    height: auto;
-    min-height: initial;
-  }
-}
 
 .hero__container {
-  background: url("../img/beats.png") right 50% no-repeat;
-  background-size: 30.5625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -483,10 +486,65 @@ address {
 }
 @media screen and (max-width: 768px) {
   .hero__container {
-    padding-bottom: 4rem;
-    background-size: 20.1875rem;
-    background-position: center top 118px;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
   }
+}
+
+.hero__content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .hero__content {
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.hero__img {
+  position: absolute;
+  right: 0;
+  top: -24px;
+  z-index: -1;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 489px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .hero__img {
+    position: static;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 323px;
+  }
+}
+.hero__img-pic {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -501,12 +559,7 @@ address {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 30.875rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .hero__title {
-    margin-top: 390px;
+    margin-top: 64px;
   }
 }
 
@@ -569,6 +622,7 @@ address {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  z-index: 1;
 }
 .hero__features-item {
   display: -webkit-box;
@@ -601,12 +655,6 @@ address {
 .features {
   height: 100vh;
   min-height: 40.625rem;
-}
-@media screen and (max-width: 480px) {
-  .features {
-    height: auto;
-    min-height: initial;
-  }
 }
 
 .features__container {
@@ -991,12 +1039,6 @@ address {
   background: url("../img/order-bg.jpg") center bottom no-repeat;
   background-size: cover;
 }
-@media screen and (max-width: 480px) {
-  .order {
-    height: initial;
-    min-height: initial;
-  }
-}
 
 .order__container {
   display: -webkit-box;
@@ -1163,11 +1205,6 @@ address {
   right: 0;
   bottom: 0;
   background-color: #FFFFFF;
-}
-@media screen and (max-width: 480px) {
-  .footer {
-    position: static;
-  }
 }
 
 .footer__container {
