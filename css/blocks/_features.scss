@@ -22,8 +22,8 @@
     }
 
     @include phones {
-        padding-top: 38px;
-        padding-top: 54px;
+        padding-top: rem(38px);
+        padding-top: rem(54px);
     }
 }
 
@@ -85,13 +85,11 @@
         background: url('../img/separator.svg') center no-repeat;
         width: rem(67px);
         height: rem(21px);
-        transform: translate(-50%, 56px);
+        transform: translate(-50%, rem(56px));
 
         @include phones {
            display: none;
-        }
-
-    
+        }    
     }
 
     &-title {
@@ -103,7 +101,7 @@
         @include phones {
             text-align: left;
             margin-top: 0;
-            @include typo-1(24px, 28px, 700);
+            @include typo-1(rem(24px), rem(28px), 700);
         }
     }
 
@@ -116,8 +114,8 @@
         
         @include phones {
             text-align: left;
-            max-width: 302px;
-            @include typo-1(16px, 19px, 400);
+            max-width: rem(302px);
+            @include typo-1(rem(16px), rem(19px), 400);
         }
     }
 }

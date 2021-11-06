@@ -4,15 +4,15 @@
     }
 
     &-link svg {
-        width: 30px;
-        height: 30px;
+        width: rem(30px);
+        height: rem(30px);
         transition-duration: .3s;
         transition-property: fill;
         fill: #B3B3B3;
 
         @include phones {
-            width: 24px;
-            height: 24px;
+            width: rem(24px);
+            height: rem(24px);
         }
     }
 

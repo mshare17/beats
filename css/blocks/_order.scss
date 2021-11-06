@@ -13,7 +13,7 @@
     align-items: center;
     height: 100%;
     position: relative;
-    max-width: 940px;
+    max-width: rem(940px);
 
     &::before {
         content: '';
@@ -33,7 +33,7 @@
     @include phones {
         width: 100%;
         max-width: 100%;
-        padding: 86px 3px 82px;
+        padding: rem(86px) rem(3px) rem(82px);
     }
 }
 
@@ -52,11 +52,11 @@
     align-items: flex-start;
 
     @include tablets {
-        max-width: 466px;
+        max-width: rem(466px);
     }
 
     @include phones {
-        margin-top: 32px;
+        margin-top: rem(32px);
     }
 
     &-block {

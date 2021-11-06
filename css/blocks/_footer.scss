@@ -34,7 +34,7 @@
 
 .phone-number {
     @include phones {
-        margin-top: 12px;
+        margin-top: rem(12px);
     }
 
     &__text {
@@ -51,6 +51,6 @@
     align-items: center;
 
     @include phones {
-        margin-top: 18px;
+        margin-top: rem(20px);
     }
 }
