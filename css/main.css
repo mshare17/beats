@@ -1441,6 +1441,7 @@ address {
   }
 }
 .product__img {
+  width: 100%;
   max-width: 28.25rem;
 }
 .product__img-pic {
