@@ -1,0 +1,152 @@
+.product {
+    height: 100vh;
+    min-height: rem(650px);
+    background-color: $gray3;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        max-width: rem(940px);
+        
+    }
+
+    &__item {
+        display: flex;
+        padding-left: rem(28px);
+
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+            padding-left: 0;
+        }
+    }
+    
+    &__img {
+        max-width: rem(452px);
+
+        &-pic {
+            width: 100%;
+        }
+
+        @include tablets {
+            max-width: rem(306px);
+        }
+    }
+    
+    &__content {
+        flex-grow: 1;
+        margin-left: rem(59px);
+
+        @include tablets {
+            margin-top: rem(50px);
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__context {
+        @include tablets {
+            display: none;
+        }
+    }
+    
+    &__title {
+        @include typo-1(rem(36px), rem(42px), 700);
+        margin-top: rem(25px);
+        text-transform: uppercase;
+        color: $black;
+
+        @include tablets {
+            @include typo-1(rem(28px), rem(32px), 700);
+            text-align: center;
+        }
+
+        @include phones {
+            max-width: rem(416px);
+        }
+    }
+    
+    &__desc {
+        @include typo-1(rem(16px), rem(19px), 400);
+        margin-top: rem(24px);
+        color: $body;
+        max-width: rem(368px);
+        
+        @include tablets {
+            margin-top: rem(14px);
+            max-width: rem(614px);
+            text-align: center;
+        }
+        
+        @include phones {
+            max-width: rem(412px);
+        }
+    }
+
+    &__details {
+        margin-top: rem(24px);
+        display: inline-flex;
+
+        &-item {
+            min-width: rem(104px);
+        }
+
+        &-item:nth-of-type(n+2) {
+            margin-left: rem(44px);
+        }
+
+        &-caption {
+            @include typo-1(rem(16px), rem(19px), 400);
+            color: $body;
+        }
+
+        &-value {
+            @include typo-1(rem(18px), rem(21px), 700);
+        }
+
+        @include phones {
+            margin-top: rem(22px);
+        }
+    }
+
+    &__order {
+        margin-top: rem(24px);
+        display: flex;
+        align-items: center;
+
+        &-price {
+            @include typo-1(rem(36px), rem(60px), 400);
+            color: $black2;
+        }
+
+        &-btn {
+            margin-left: rem(14px);
+            flex-shrink: 0;
+
+            @include tablets {
+                margin-left: rem(38px);
+            }
+        }
+
+        @include phones {
+            margin-top: rem(22px);
+
+            &-price {
+                @include typo-1(rem(32px), rem(60px), 400);
+                color: $black2;
+            }
+
+            &-btn {
+                min-height: rem(60px);
+                align-items: center;
+            }
+        }
+    }
+}
+

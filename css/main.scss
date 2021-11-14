@@ -10,9 +10,12 @@ $gray: #F5F5F5;
 $gray2: #F2F5F4;
 $gray3: #F8FAF9;
 $gray4: #C4C4C4;
+$gray5: #9A9A9A;
 $body: #666666;
 $white: #FFFFFF;
 $black: #292929;
+$black2: #151515;
+$black3: #333537;
 $red: #E01F3D;
 
 //typography
@@ -37,6 +40,9 @@ $red: #E01F3D;
 @import "components/_checkbox";
 @import "components/_radio";
 @import "components/_socials";
+@import "components/_contex";
+@import "components/_slider";
+@import "components/_burger-menu";
 
 //blocks
 @import "blocks/_map";
@@ -46,4 +52,5 @@ $red: #E01F3D;
 @import "blocks/_features";
 @import "blocks/_reviews";
 @import "blocks/_order";
+@import "blocks/product";
 @import "blocks/_footer";

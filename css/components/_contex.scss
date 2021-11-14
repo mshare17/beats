@@ -1,0 +1,73 @@
+.context {
+    position: relative;
+    display: inline-flex;
+
+    &__control {
+        width: rem(90px);
+        height: rem(90px);
+        background-color: $gray5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: rem(4px);
+        cursor: pointer;
+    }
+    
+    &__list {
+        display: none;
+        position: absolute;
+        left: rem(90px);
+        top: 0;
+        padding: rem(18px) rem(14px) rem(24px);
+        width: rem(274px);
+        border-radius: rem(4px);
+        background-color: $white;
+        box-shadow: 4px 4px 40px 0 rgba(0, 0, 0, .06);
+    }
+
+    &:hover .context__list {
+        display: block;
+    }
+
+    &__item {
+        padding: rem(10px) rem(12px);
+       display: flex;
+       align-items: center;
+       @include typo-1(rem(16px), rem(24px), 400);
+
+       &:before {
+           content: '';
+           margin-right: rem(12px);
+           display: inline-flex;
+           width: rem(32px);
+           height: rem(32px);
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: contain;
+       }
+
+       &--grape:before {
+            background-image: url('../img/grape.svg');
+       }
+
+       &--nut:before {
+            background-image: url('../img/nut.svg');
+       }
+
+       &--almond:before {
+            background-image: url('../img/almond.svg');
+       }
+
+       &--powder:before {
+            background-image: url('../img/powder.svg');
+       }
+
+       &--apitherapy:before {
+            background-image: url('../img/apitherapy.svg');
+       }
+
+       &-value {
+           margin-left: auto;
+       }
+    }
+}

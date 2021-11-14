@@ -1,0 +1,54 @@
+.slider {
+    position: relative;
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        padding: 0;
+        width: rem(24px);
+        height: rem(40px);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        &-left {
+            background-image: url('../img/left.svg');
+            left: 0;
+            transform: translate(-100%, -50%);
+        }
+
+        &-right {
+            background-image: url('../img/right.svg');
+            right: 0;
+            transform: translate(100%, -50%);
+        }
+
+        @include tablets {
+            top: rem(140px);
+
+            &-left {
+                left: 0;
+                transform: translate(280%, 0);
+            }
+    
+            &-right {
+                right: 0;
+                transform: translate(-280%, 0);
+            }
+        }
+
+        @include phones {
+            &-left {
+                transform: translate(0, 0);
+            }
+    
+            &-right {
+                transform: translate(0, 0);
+            }
+        }
+    }
+}
