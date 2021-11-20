@@ -13,6 +13,7 @@ module.exports = {
 
   devServer: {
     static: './docs',
+    https: true,
 
     historyApiFallback: {
       rewrites: [

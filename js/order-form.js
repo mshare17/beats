@@ -1,6 +1,7 @@
 import { createModal } from "./modal";
 
-const SEND_MAIL_URL = "http://94.26.230.151/sendmail";
+const CORS_PROXY_URL = "https://cors-anywhere.herokuapp.com/";
+const SEND_MAIL_URL = CORS_PROXY_URL + "http://94.26.230.151/sendmail";
 const SEND_EMAIL = "beats-world@apple.com";
 const FIELD_LIST = ['name', 'phone', 'comment'];
 
@@ -20,7 +21,7 @@ formElem.addEventListener('submit', (event) => {
 
     const options = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'some' },
         body: JSON.stringify(body),
     };
 
