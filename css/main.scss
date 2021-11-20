@@ -6,32 +6,34 @@ $tablets: 768px;
 $phones: 480px;
 
 //colors
-$gray: #F5F5F5;
-$gray2: #F2F5F4;
-$gray3: #F8FAF9;
-$gray4: #C4C4C4;
-$gray5: #9A9A9A;
+$gray: #f5f5f5;
+$gray2: #f2f5f4;
+$gray3: #f8faf9;
+$gray4: #c4c4c4;
+$gray5: #9a9a9a;
 $body: #666666;
-$white: #FFFFFF;
+$white: #ffffff;
 $black: #292929;
 $black2: #151515;
 $black3: #333537;
-$red: #E01F3D;
+$red: #e01f3d;
 
 //typography
-@mixin typo-1 ($size, $lh, $weight) {
-    font-family: "Play", Arial, Helvetica, sans-serif;
-    font-size: $size;
-    line-height: $lh;
-    font-weight: $weight;
+@mixin typo-1($size, $lh, $weight) {
+  font-family: "Play", Arial, Helvetica, sans-serif;
+  font-size: $size;
+  line-height: $lh;
+  font-weight: $weight;
 }
 
-@mixin typo-2 ($size, $lh, $weight) {
-    font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
-    font-size: $size;
-    line-height: $lh;
-    font-weight: $weight;
+@mixin typo-2($size, $lh, $weight) {
+  font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
+  font-size: $size;
+  line-height: $lh;
+  font-weight: $weight;
 }
+
+@import "_normalize";
 
 //components
 @import "components/_media";

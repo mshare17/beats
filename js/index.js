@@ -1,3 +1,5 @@
+import '../css/main.scss';
+
 const menuBurgerElem = document.querySelector('.burger-menu');
 const btnOpenBurgerElem = document.querySelector('.header__burger');
 const btnCloseBurgerElem = document.querySelector('.burger-menu__btn-close');
