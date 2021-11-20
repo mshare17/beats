@@ -1,0 +1,21 @@
+.overlay {
+    background-color: $blackOp80;
+}
+
+.modal {
+    border-radius: rem(4px);
+    min-width: rem(310px);
+    min-height: rem(176px);
+    background-color: $white;
+    padding: rem(16px) rem(24px);
+
+    &__text {
+        @include typo-1(rem(18px), rem(24px), 400);
+        padding-bottom: rem(18px);
+        color: $black2;
+
+        &--error {
+            color: $red;
+        }
+    }
+}

@@ -56,4 +56,10 @@
             min-height: rem(82px);
         }
     }
+
+    &__error {
+        padding-top: rem(8px);
+        @include typo-1(rem(16px), rem(19px), 400);
+        color: $red;
+    }
 }

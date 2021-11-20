@@ -15,39 +15,40 @@
         background-repeat: no-repeat;
         background-size: contain;
 
-        &-left {
+        &-prev {
             background-image: url('../img/left.svg');
             left: 0;
             transform: translate(-100%, -50%);
         }
 
-        &-right {
+        &-next {
             background-image: url('../img/right.svg');
             right: 0;
             transform: translate(100%, -50%);
         }
 
         @include tablets {
-            top: rem(140px);
+            top: 50%;
+            z-index: 1;
 
-            &-left {
+            &-prev {
                 left: 0;
-                transform: translate(280%, 0);
+                transform: translate(280%, -440%);
             }
     
-            &-right {
+            &-next {
                 right: 0;
-                transform: translate(-280%, 0);
+                transform: translate(-280%, -440%);
             }
         }
 
         @include phones {
-            &-left {
-                transform: translate(0, 0);
+            &-prev {
+                transform: translate(0, -440%);
             }
     
-            &-right {
-                transform: translate(0, 0);
+            &-next {
+                transform: translate(0, -440%);
             }
         }
     }

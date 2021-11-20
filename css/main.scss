@@ -16,6 +16,7 @@ $white: #ffffff;
 $black: #292929;
 $black2: #151515;
 $black3: #333537;
+$blackOp80: rgba(0, 0, 0, 0.8);
 $red: #e01f3d;
 
 //typography
@@ -45,6 +46,7 @@ $red: #e01f3d;
 @import "components/_contex";
 @import "components/_slider";
 @import "components/_burger-menu";
+@import "components/_modal";
 
 //blocks
 @import "blocks/_map";
@@ -52,7 +54,8 @@ $red: #e01f3d;
 @import "blocks/_header";
 @import "blocks/_hero";
 @import "blocks/_features";
+@import "blocks/_product";
+@import "blocks/_team";
 @import "blocks/_reviews";
 @import "blocks/_order";
-@import "blocks/product";
 @import "blocks/_footer";
