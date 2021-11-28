@@ -1,0 +1,51 @@
+.fixed-menu {
+    position: fixed;
+    top: 20%;
+    right: 3%;
+    z-index: 100;
+    color: $white;
+
+    @include tablets {
+        display: none;
+    }
+
+    &--shadowed {
+        .fixed-menu__item {
+            &::before {
+                background-color: $blackOp60;
+            }
+        }
+    }
+
+    &__item {
+        cursor: pointer;
+        border: 1px solid transparent;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            display: block;
+            border-radius: 50%;
+            background-color: $white;
+        }
+        
+        &:nth-of-type(n+2) {
+            margin-top: rem(6px);
+        }
+        
+        &--active {
+            border-color: $red; 
+
+            &::before {
+                background-color: $red !important;
+            }
+        }
+    }
+}

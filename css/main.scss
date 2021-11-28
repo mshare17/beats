@@ -11,11 +11,14 @@ $gray2: #f2f5f4;
 $gray3: #f8faf9;
 $gray4: #c4c4c4;
 $gray5: #9a9a9a;
+$gray6: #999999;
 $body: #666666;
 $white: #ffffff;
 $black: #292929;
 $black2: #151515;
 $black3: #333537;
+$black3Op90: rgba(51, 53, 55, 0.9);
+$blackOp60: rgba(41, 41, 41, 0.6);
 $blackOp80: rgba(0, 0, 0, 0.8);
 $red: #e01f3d;
 
@@ -47,6 +50,8 @@ $red: #e01f3d;
 @import "components/_slider";
 @import "components/_burger-menu";
 @import "components/_modal";
+@import "components/_player";
+@import "components/_fixed-menu";
 
 //blocks
 @import "blocks/_map";
@@ -56,6 +61,8 @@ $red: #e01f3d;
 @import "blocks/_features";
 @import "blocks/_product";
 @import "blocks/_team";
+@import "blocks/products-menu";
 @import "blocks/_reviews";
+@import "blocks/_about";
 @import "blocks/_order";
 @import "blocks/_footer";

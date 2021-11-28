@@ -1,0 +1,78 @@
+.products-menu {
+    position: relative;
+    height: 100%;
+    min-height: rem(650px);
+    background-color: #181818;
+    background: url('../img/product-menu-bg.jpg') center bottom no-repeat;
+    background-size: cover;
+
+    &__container {
+        padding-top: rem(116px);
+        max-width: rem(940px);
+        height: 100%;
+    }
+
+    &__list {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+
+        &:nth-of-type(1) {
+            .products-menu__link {
+                background-color: $gray6;
+            }
+        }
+    
+        &:nth-of-type(2) {
+            .products-menu__link {
+                background-color: $black2;
+            }
+        }
+    
+        &:nth-of-type(3) {
+            .products-menu__link {
+                background-color: $red;
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        width: rem(102px);
+        text-decoration: none;
+        padding-top: 34px;
+        padding-bottom: 34px;
+        justify-content: center;
+        cursor: pointer;
+
+        &-caption {
+            @include typo-2(rem(36px), rem(43px), 700);
+            display: block;
+            color: $white;
+            writing-mode: vertical-rl;
+            transform:scale(-1);
+        }
+    }
+
+    &__content {
+        position: relative;
+        overflow: hidden;
+        width: 0;
+        transition: width .6s;
+        background-color: $black3Op90;
+    }
+    
+    &__text {
+        padding: 32px 38px;
+        position: absolute;
+        @include typo-2(rem(16px), rem(24px), 400);
+        color: $white;
+    }
+}

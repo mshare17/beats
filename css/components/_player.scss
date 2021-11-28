@@ -1,0 +1,112 @@
+.player {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 662px;
+
+    &.active {
+        .player__splash {
+            display: none;
+        }
+    }
+
+    &.paused {
+        .player__start {
+            background-image: url('../img/paused.svg');
+        } 
+    }
+
+    &__wrapper {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%;
+        iframe {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__splash {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('../img/player-splash.jpg') transparent center no-repeat;
+        background-size: cover;
+        cursor: pointer;
+    }
+
+    &__controls {
+        padding: 0 rem(16px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $black2;
+        height: rem(35px);
+    }
+
+    &__start {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        background: url('../img/play.svg') transparent center no-repeat;
+        background-size: cover;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__playback {
+        margin-left: rem(30px);
+        margin-right: rem(44px);
+        position: relative;
+        height: 100%;
+        flex-grow: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: $black3;
+            transform: translateY(-50%);
+        }
+
+        &-button {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%);
+            width: rem(16px);
+            height: rem(16px);
+            border-radius: 50%;
+            padding: 0;
+            border: none;
+            background-color: $red;
+            cursor: pointer;
+        }
+    }
+
+    &__duration {
+        @include typo-1(rem(13px), rem(14px), 400);
+        flex-shrink: 0;
+        color: $white;
+        user-select: none;
+
+        &-completed {
+            &:after {
+                content: ' / ';
+            }
+        }
+    }
+}

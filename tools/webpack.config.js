@@ -13,7 +13,7 @@ module.exports = {
 
   devServer: {
     static: './docs',
-    https: true,
+    // https: true,
 
     historyApiFallback: {
       rewrites: [
@@ -54,6 +54,7 @@ module.exports = {
     new HtmlWebpackPlugin(
       {
         template: './index.html',
+        inject: 'body'
       }
     ),
   ]

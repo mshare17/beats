@@ -1,14 +1,9 @@
 .map {
-    height: 100vh;
-    min-height: rem(650px);
-}
-
-.map__content {
+    position: relative;
     height: 100%;
-}
+    min-height: rem(650px);
 
-.map__content-img {
-    max-height: 100%;
-    max-width: initial;
-    width: auto;
+    &__content {
+        height: 100%;
+    }
 }
