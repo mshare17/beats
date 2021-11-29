@@ -13,8 +13,6 @@ const getWidth = (elem) => {
     const contentTextPL = parseInt(contentTextElem.css("padding-left"), 10);
     const contentTextPR = parseInt(contentTextElem.css("padding-right"), 10);
 
-    console.log(contentTextPL);
-
     const isTablet = screenWidth <= 768;
     const width = isTablet ? screenWidth - widthTitles : 524;
     const textWidth = width - contentTextPL - contentTextPR;
@@ -40,10 +38,6 @@ const openElem = (infoElem) => {
     const contentElem = infoElem.find('.products-menu__content');
     const contentTextElem = infoElem.find('.products-menu__text');
     const width = getWidth(contentElem);
-
-    console.log(contentTextElem);
-
-    console.log(width.text);
 
     infoElem.addClass('is-opened');
     contentElem.width(width.content);

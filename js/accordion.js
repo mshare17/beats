@@ -11,8 +11,6 @@ const closeAll = () => {
 
 const openElem = (infoElem, targetElem, height) => {
     infoElem.addClass('is-opened');
-
-    console.log(targetElem);
     targetElem.height(height);
 }
 

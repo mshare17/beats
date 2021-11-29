@@ -5,8 +5,6 @@ import MobileDetect from 'mobile-detect';
 const mobileDetect = new MobileDetect(window.navigator.userAgent);
 const isMobile = mobileDetect.mobile();
 
-console.log(mobileDetect);
-
 const sections = $('section');
 const display = $('.maincontent');
 const sideMenu = $('.fixed-menu');
@@ -140,8 +138,6 @@ if (isMobile) {
             }
     
             scroller[scrollDirection]();
-    
-            console.log('swipe');
         }
     });
 }

@@ -83,23 +83,23 @@ const onPlayerStateChange = event => {
 };
  
 window.onYouTubeIframeAPIReady = function () {
- player = new YT.Player("yt-player", {
-   height: "399",
-   width: "662",
-   videoId: "wWoS3egI_9o",
-   events: {
-     onReady: onPlayerReady,
-     onStateChange: onPlayerStateChange
-   },
-   playerVars: {
-     controls: 0,
-     disablekb: 0,
-     showinfo: 0,
-     rel: 0,
-     autoplay: 0,
-     modestbranding: 0
-   }
- });
+  player = new YT.Player("yt-player", {
+    height: "399",
+    width: "662",
+    videoId: "wWoS3egI_9o",
+    events: {
+      onReady: onPlayerReady,
+      onStateChange: onPlayerStateChange
+    },
+    playerVars: {
+      controls: 0,
+      disablekb: 0,
+      showinfo: 0,
+      rel: 0,
+      autoplay: 0,
+      modestbranding: 0
+    }
+  });
 }
  
 eventsInit();
