@@ -104,12 +104,6 @@ $(window).on('keydown', e => {
                 break;        
         }
     }
-
-    if (deltaY > 0) {
-        scroller.next()
-    } else {
-        scroller.prev();
-    }
 })
 
 $("[data-scroll-to]").click(e => {

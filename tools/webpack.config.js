@@ -7,13 +7,12 @@ module.exports = {
   entry: './js/index.js',
 
   output: {
-    filename: 'js/bundle.js',
+    filename: './js/[contenthash].bundle.js',
     path: path.resolve(__dirname, '../docs'),
   },
 
   devServer: {
     static: './docs',
-    // https: true,
 
     historyApiFallback: {
       rewrites: [
